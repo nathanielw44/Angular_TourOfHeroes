@@ -1,1 +1,8 @@
-<p>heroes works!</p>
+<ul class="heros">
+  <li *ngFor="let hero of heroes" (click)=onSelect(hero) [class.selected]="hero===selectedHero">
+    <span class="badge">{{ hero.name }}</span>
+  </li>
+</ul>
+
+<!-- NOTE: Details begin here -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
