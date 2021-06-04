@@ -1,1 +1,9 @@
-<p>messages works!</p>
+<div *ngIf="ms.messages.length">
+  <hr>
+  <h2>Messages</h2>
+  <button class="clear" (click)="ms.clear()">Dismiss</button>
+  <div *ngFor="let message of ms.messages">
+    {{ message }}
+  </div>
+
+</div>
